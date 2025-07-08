@@ -1,0 +1,20 @@
+@media screen and (min-width: 600px) {
+    header{
+        flex-direction: row;
+    }
+    header nav{
+        display: block;
+    }
+    .menu-icon,#menuMobile{
+        display: none  !important ;
+    }
+
+
+    #landing-page article h2 {
+        font-size: 2.5em;
+    }
+    h1{
+        font-size: 10em;
+    }
+
+}
