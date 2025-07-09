@@ -1,0 +1,23 @@
+#cartão{
+    display: flex;
+}
+#cartão div{
+    display: flex;
+    flex-direction: column;
+    width: min(350px,100%);
+    aspect-ratio: 5/3;
+}
+#cartão div img{
+    width: 20%;
+}
+#cartão #front{
+    background-color: #f00;
+}
+#cartão #back{
+    background-color: #00ff0d;
+}
+
+#cartão #nome{
+    font-size: 2em;
+}
+/* https://www.foregon.com/media/uploads/2019/11/image.png */

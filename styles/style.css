@@ -10,9 +10,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--fontPadrao);
 }
 
+body{
+    text-align: center;
+    font-family: var(--fontPadrao);
+    background-color: #f5f5f5;
+}
 
 header {
     display: flex;
@@ -21,11 +25,11 @@ header {
 
     height: 7dvh;
 
-    color: #ffffff;
+    color: #000000;
     padding: 20px 40px;
     width: 100dvw;
 
-    position: fixed;
+    position: static;
     top: 0;
     z-index: 1;
 }
@@ -111,21 +115,51 @@ header #buttonDarkMode {
     backdrop-filter: brightness(.9);
 }  
 /* ============================= INICIO ======================*/
+section{
+    padding: 1em;
+}
+
 
 #sectionInicio{
-    text-align: center;
-    background-color: #ffffff;
-    background-image: linear-gradient(var(--cor2),var(--cor1));
-    
-    /* background-image: linear-gradient(transparent 60%, #000000), url(../images/predios.jpg); */
-
-    background-size: cover;
-    height: 100dvh;
     align-content: center;
+    /* background-color: #ffffff; */
+   
+    /* background-image: linear-gradient(transparent 60%, #000000), url(../images/predios.jpg); */
+    height: 100dvh;
+
 }
-h1{
+
+#sectionInicio article{
+    background-image: linear-gradient(var(--cor2),var(--cor1));
+    background-size: cover;
+}
+
+#sectionInicio h1{
     font-family: var(--fontDestaque);
     font-size: 5em;
     color: #ffffff;
     font-weight: normal;
+}
+
+#sectionSobre{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#sectionSobre article{
+    width: min(650px,100%);
+}
+
+#sectionSobre h2{
+    font-family: var(--fontDestaque);
+    font-weight: normal;
+    font-size: 3em;
+}
+
+#sectionSobre figure img{
+    width: min(600px,100%);
+    aspect-ratio: 3/4;
+    object-fit: cover;
 }
