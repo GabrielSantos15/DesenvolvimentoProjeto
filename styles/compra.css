@@ -86,7 +86,7 @@
 }
 
 .dados output {
-  text-align: right;
+    text-align: right;
 }
 
 #cartao.turn #front {
@@ -97,4 +97,50 @@
 #cartao.turn #back {
     transform: rotateY(0);
     z-index: 1;
+}
+
+form {
+    width: min(750px, 100%);
+    padding: 1em;
+    background-color: #fff;
+    text-align: left;
+}
+
+form fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    width: 100%;
+}
+
+form #bandeirasForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1em;
+}
+
+form #bandeirasForm input {
+    display: none;
+}
+
+form #bandeirasForm input+label {
+    cursor: pointer;
+    filter: saturate(0);
+    opacity: .7;
+    transition: all .2s;
+}
+
+form #bandeirasForm input#visa+label {
+    filter: brightness(0);
+}
+
+form #bandeirasForm input:checked+label {
+    filter: saturate(1);
+    opacity: 1;
+}
+
+form #bandeirasForm img {
+    width: 50px;
 }

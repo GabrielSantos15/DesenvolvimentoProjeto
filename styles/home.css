@@ -1,0 +1,71 @@
+#sectionInicio {
+    align-content: center;
+    /* background-color: #ffffff; */
+
+    background-image: linear-gradient(#ffffff34 50%, #000000), url(../images/predios.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: inset 0px -20px 50px #000000a2,;
+    /* background-image: linear-gradient(var(--cor2), var(--cor1)); */
+    margin: 1em;
+
+    height: 650px;
+    border-radius: 25px;
+
+}
+
+#sectionInicio article {
+    /* background-image: linear-gradient(var(--cor2), var(--cor1)); */
+    align-content: center;
+    background-size: cover;
+}
+
+#sectionInicio h1 {
+    background-image: linear-gradient(var(--cor2), var(--cor1));
+    background-clip: text;
+    width: 100%;
+    font-family: var(--fontGrafite);
+    font-size: 10em;
+    color: #ffffff00;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000000;
+    font-weight: normal;
+}
+
+#sectionInicio h1::before {
+    content: "> ";
+}
+
+#sectionInicio h1::after {
+    content: " <";
+}
+
+#sectionSobre {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#sectionSobre article {
+    width: min(650px, 100%);
+}
+
+#sectionSobre h2 {
+    font-size: 3em;
+}
+
+#sectionSobre figure {
+    mask-image: url(../images/mancha.png);
+    -webkit-mask-image: url(../images/mancha.png);
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    mask-size: contain;
+    width: min(760px, 100%);
+}
+
+@media screen and (min-width: 600px) {
+    #landing-page article h2 {
+        font-size: 2.5em;
+    }
+}

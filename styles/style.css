@@ -1,10 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Spray+Paint&display=swap');
 
+@font-face {
+    font-family: "grafiteFont";
+    src: url(../fonts/MARSNEVENEKSK-Clean.otf);
+}
+
 :root{
-    --cor1:#E11B2C;
-    --cor2:#B82736;
+    --corTema: #ff0000;
+    --cor1:#ff0000;
+    --cor2:#ffd000;
+    --corEscura:#2d2d2d;
     --fontPadrao: "Poppins", sans-serif;
-    --fontDestaque: "Rubik Spray Paint", sans-serif;
+    --fontGrafite: "grafiteFont", sans-serif;
 }
 *{
     margin: 0;
@@ -27,9 +34,9 @@ header {
 
     color: #000000;
     padding: 20px 40px;
-    width: 100dvw;
+    background-color: #fff;
 
-    position: static;
+    position: sticky;
     top: 0;
     z-index: 1;
 }
@@ -56,6 +63,7 @@ header nav {
 header nav ul {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 15px;
     list-style: none;
 }
@@ -64,6 +72,12 @@ header nav a {
     display: block;
     text-decoration: none;
     color: #000000;
+}
+header nav a.destaque {
+    background-color: var(--corTema);
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 header #buttonDarkMode {
@@ -114,52 +128,28 @@ header #buttonDarkMode {
 #menuMobile ul a:hover {
     backdrop-filter: brightness(.9);
 }  
-/* ============================= INICIO ======================*/
+
+h1{
+    font-size: 5em;
+}
+
 section{
+    display: flex;
+    justify-content: center;
     padding: 1em;
 }
 
 
-#sectionInicio{
-    align-content: center;
-    /* background-color: #ffffff; */
-   
-    /* background-image: linear-gradient(transparent 60%, #000000), url(../images/predios.jpg); */
-    height: 100dvh;
+/* ============================= INICIO ======================*/
 
-}
-
-#sectionInicio article{
-    background-image: linear-gradient(var(--cor2),var(--cor1));
-    background-size: cover;
-}
-
-#sectionInicio h1{
-    font-family: var(--fontDestaque);
-    font-size: 5em;
-    color: #ffffff;
-    font-weight: normal;
-}
-
-#sectionSobre{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-#sectionSobre article{
-    width: min(650px,100%);
-}
-
-#sectionSobre h2{
-    font-family: var(--fontDestaque);
-    font-weight: normal;
-    font-size: 3em;
-}
-
-#sectionSobre figure img{
-    width: min(600px,100%);
-    aspect-ratio: 3/4;
-    object-fit: cover;
+@media screen and (min-width: 600px) {
+    header{
+        flex-direction: row;
+    }
+    header nav{
+        display: block;
+    }
+    .menu-icon,#menuMobile{
+        display: none  !important ;
+    }
 }

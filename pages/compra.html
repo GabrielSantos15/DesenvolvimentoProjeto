@@ -13,19 +13,22 @@
     <link rel="stylesheet" href="../styles/compra.css">
     <script src="data/produtos.js" defer></script>
     <script src="../scripts/script.js" defer></script>
+    <script src="../scripts/compra.js" defer></script>
 </head>
 
 <body>
-    <header>
+<header>
         <figure>
-            <h2 id="logo"><i class="fa-solid fa-code icon"></i></h2>
+            <h2 id="logo"><img width="50px" src="../images/logoSimples.png" alt="Lgo"></h2>
         </figure>
         <i class="fa-solid fa-bars menu-icon icon" onclick="menu()"></i>
         <nav>
             <ul>
-                <li><a href="#landing-page">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="carrinho.html" class="destaque"><i class="fa-solid fa-cart-shopping"></i></i>Carrinho</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -33,41 +36,76 @@
         <ul>
             <li><a href="#landing-page">Início</a></li>
             <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="pages/compra.html">compra</a></li>
         </ul>
     </nav>
     <main>
-        <section class="" aria-label="Cartão bancário" id="cartao">
+        <section  aria-label="Cartão bancário" id="cartao">
 
             <article id="front" aria-label="Frente do cartão">
                 <figure>
                     <img width="45"
-                        src="https://t3.ftcdn.net/jpg/01/22/06/72/360_F_122067245_li2zr9npi1aZZ6dto4SNgxAFKt302X7d.jpg"
+                        src="../images/chip.png"
                         alt="Chip do cartão">
                     <img width="45"
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/1200px-Mastercard_2019_logo.svg.png"
+                        src="../images/bandeiras/mastercard.png"
                         alt="bandeira do cartão">
                 </figure>
-                <p id="numero">5304 3400 0000 0000</p>
-                <p id="validade">04/28</p>
-                <p id="nome">Gabriel dos Santos</p>
+                <p id="numero">--</p>
+                <p id="validade">--</p>
+                <p id="nome">--</p>
             </article>
 
             <article id="back" aria-label="Traseira do cartão">
                 <header class="faixa-cinza"></header>
                 <footer class="dados">
-                    <label>CMV:</label> <output>123</output>
-                    <label>Agência:</label><output>0001</output>
-                    <label>Conta:</label><output>0101010101-1</output>
+                    <label>CMV:</label><output id="cmv">--</output>
+                    <label>Agência:</label><output id="agencia">--</output>
+                    <label>Conta:</label><output id="conta">--</output>
                 </footer>
             </article>
         </section>
-        <!-- <section>
-            <form action="">
-                <label for="">Bandeira</label>
-                <input type="radio" value="Mastercard">
+        <section>
+            <form action="#" method="post">
+                <p>Bandeira:</p>
+                <fieldset id="bandeirasForm">
+                    <input type="radio" name="bandeira" value="mastercard" id="mastercard" checked>
+                    <label for="mastercard">
+                        <img src="../images/bandeiras/mastercard.png" alt="mastercard">
+                    </label>
+                    <input type="radio" name="bandeira" value="visa" id="visa" required>
+                    <label for="visa">
+                        <img src="../images/bandeiras/visa.png" alt="Visa">
+                    </label>
+                    <input type="radio" name="bandeira" value="elo" id="elo">
+                    <label for="elo">
+                        <img src="../images/bandeiras/elo.png" alt="Elo">
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="input-nome" name="nome" maxlength="25" required>
+
+                    <label for="numero">Número:</label>
+                    <input type="text"  id="input-numero" name="numero" inputmode="numeric"  required>
+    
+    
+                    <label for="input-validade">Validade:</label>
+                    <input type="month" id="input-validade" name="validade" maxlength="5" required>
+    
+                    <label for="input-cvv">CVV:</label>
+                    <input type="text" id="input-cvv" name="cvv" inputmode="numeric" pattern="[0-9]*" maxlength="3" required>
+    
+                    <label for="ainput-gencia">Agência:</label>
+                    <input type="text" id="input-agencia" name="agencia" inputmode="numeric" pattern="[0-9]*" maxlength="4"  required>
+    
+                    <label for="input-conta">Conta:</label>
+                    <input type="text" id="input-conta" name="conta" inputmode="numeric" pattern="[0-9]*" maxlength="8" required>
+                </fieldset>
+                <button type="submit">Enviar</button>
             </form>
-        </section> -->
+
+        </section>
     </main>
     <footer>
 
