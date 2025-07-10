@@ -1,7 +1,6 @@
+const containerCarrinho = document.querySelector("#carrinhoContainer");
 
-const containerProdutos = document.querySelector("#produtosContainer");
-
-function inserirProdutos(container,lista) {
+function mostrarCarrinho(container,lista) {
   container.innerHTML = `
         <img class="logoCard" src="../images/logo.png" alt="Logo">
      `;
@@ -13,29 +12,30 @@ function inserirProdutos(container,lista) {
                     <img style="filter: hue-rotate(${e.hueRotate}deg);" src="../images/produtos/${e.img}" alt="">
                 </figure>
                 <p>${e.texto}</p>
-                <button onclick="adicionarCarrinho(${i})">Adicionar</button>
+                <button onclick="remover(${i})">Remover</button>
                 <h4 class="preco">R$ ${e.valor}</h4>
             </article>
             `;
   });
 }
 
-if (containerProdutos) {
-  inserirProdutos(containerProdutos, produtosList);
-}
 if (containerCarrinho) {
-  const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
-  inserirProdutos(containerCarrinho, carrinho);
+  const carrinho = JSON.parse(localStorage.getItem("carrinho"));
+  if(carrinho)mostrarCarrinho(containerCarrinho, carrinho);
 }
 
-function adicionarCarrinho(i){
-  try{
+function remover(i){
+  try {
     let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
-    carrinho.push(produtosList[i]);
+    carrinho.splice(i, 1);
+    // Atualiza o carrinho
     localStorage.setItem("carrinho", JSON.stringify(carrinho));
-    alert("Adicionado") 
-  }catch{
-    alert("Parece que algo deu errado, tente novamente") 
+    alert("Item removido com sucesso");
+
+    // Atualiza a exibição da página (se houver um container)
+      mostrarCarrinho(containerCarrinho, carrinho);
+    }
+  catch {
+    alert("Parece que algo deu errado, tente novamente");
   }
 }
-

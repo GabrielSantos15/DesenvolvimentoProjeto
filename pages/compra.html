@@ -66,7 +66,7 @@
             </article>
         </section>
         <section>
-            <form action="#" method="post">
+            <form id="formsCompra" method="post">
                 <p>Bandeira:</p>
                 <fieldset id="bandeirasForm">
                     <input type="radio" name="bandeira" value="mastercard" id="mastercard" checked>
@@ -104,7 +104,14 @@
                 </fieldset>
                 <button type="submit">Enviar</button>
             </form>
-
+            <script>
+                document.querySelector("#formsCompra").addEventListener("submit",(e)=>{
+                    e.preventDefault()
+                    alert("compra efetuada com sucesso")
+                    localStorage.removeItem("carrinho");
+                    window.location.href = "../index.html";
+                })
+            </script>
         </section>
     </main>
     <footer>
