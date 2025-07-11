@@ -5,21 +5,22 @@
     src: url(../fonts/MARSNEVENEKSK-Clean.otf);
 }
 
-:root{
-    --corTema: #ff0000;
-    --cor1:#ff0000;
-    --cor2:#ffd000;
-    --corEscura:#2d2d2d;
+:root {
+    --corTema: #E8244A;
+    --cor1: #ff002b;
+    --cor2: #ffd000;
+    --corEscura: #2d2d2d;
     --fontPadrao: "Poppins", sans-serif;
     --fontGrafite: "grafiteFont", sans-serif;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     text-align: center;
     font-family: var(--fontPadrao);
     background-color: #f5f5f5;
@@ -73,6 +74,7 @@ header nav a {
     text-decoration: none;
     color: #000000;
 }
+
 header nav a.destaque {
     background-color: var(--corTema);
     color: #ffffff;
@@ -93,11 +95,12 @@ header #buttonDarkMode {
 
     background-color: var(--corCard);
     box-shadow: -11px 0px 20px 4px #00000036;
-    background-color: #ffffffc5;
+    background-color: #ffffff;
 
     overflow: hidden;
     z-index: 1;
     transition: all ease .3s;
+    text-wrap: nowrap;
 }
 
 #menuMobile.hide {
@@ -127,13 +130,31 @@ header #buttonDarkMode {
 
 #menuMobile ul a:hover {
     backdrop-filter: brightness(.9);
-}  
-
-h1{
-    font-size: 5em;
 }
 
-section{
+h1 {
+    font-size: 5em;
+
+    margin: auto;
+    width: fit-content;
+
+    padding: 0 1em;
+    background-image: url(../images/traco.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+h2:not(#logo) {
+    margin: auto;
+    width: fit-content;
+    font-size: 3em;
+
+    background-image: url(../images/traco.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+section {
     display: flex;
     justify-content: center;
     padding: 1em;
@@ -143,13 +164,16 @@ section{
 /* ============================= INICIO ======================*/
 
 @media screen and (min-width: 600px) {
-    header{
+    header {
         flex-direction: row;
     }
-    header nav{
+
+    header nav {
         display: block;
     }
-    .menu-icon,#menuMobile{
-        display: none  !important ;
+
+    .menu-icon,
+    #menuMobile {
+        display: none !important;
     }
 }

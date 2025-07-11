@@ -2,7 +2,7 @@
     align-content: center;
     /* background-color: #ffffff; */
 
-    background-image: linear-gradient(#ffffff34 50%, #000000), url(../images/predios.jpg);
+    background-image: linear-gradient(#ffffff79 50%, #000000), url(../images/predios.jpg);
     background-size: cover;
     background-attachment: fixed;
     box-shadow: inset 0px -20px 50px #000000a2,;
@@ -40,6 +40,34 @@
     content: " <";
 }
 
+#produtosApresentacao{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.cardApresentacao{
+    background-color: var(--corTema);
+    width: min(400px, 100%);
+    height: min-content;
+    padding: 1em;
+    box-shadow: 5px 5px 15px #0000003d;
+    border-radius: 10px;
+    color: #fff;
+}
+.cardApresentacao p{
+    margin-bottom: 2em;
+}
+.cardApresentacao a{
+    all: unset;
+    background-color: #fff;
+    color: var(--corTema);
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 #sectionSobre {
     display: flex;
     justify-content: space-around;
@@ -51,10 +79,6 @@
     width: min(650px, 100%);
 }
 
-#sectionSobre h2 {
-    font-size: 3em;
-}
-
 #sectionSobre figure {
     mask-image: url(../images/mancha.png);
     -webkit-mask-image: url(../images/mancha.png);
@@ -63,6 +87,12 @@
     mask-size: contain;
     width: min(760px, 100%);
 }
+
+#sectionSobre figure img{
+    max-width: 100%;
+}
+
+
 
 @media screen and (min-width: 600px) {
     #landing-page article h2 {
