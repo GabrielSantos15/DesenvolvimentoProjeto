@@ -17,7 +17,7 @@
 </head>
 
 <body>
-<header>
+    <header>
         <figure>
             <h2 id="logo"><img width="50px" src="../images/logoSimples.png" alt="Lgo"></h2>
         </figure>
@@ -34,22 +34,20 @@
     </header>
     <nav id="menuMobile" class="hide">
         <ul>
-            <li><a href="#landing-page">Início</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="pages/compra.html">compra</a></li>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="carrinho.html" class="destaque"><i class="fa-solid fa-cart-shopping"></i></i>Carrinho</a>
+            </li>
         </ul>
     </nav>
     <main>
-        <section  aria-label="Cartão bancário" id="cartao">
+        <section aria-label="Cartão bancário" id="cartao">
 
             <article id="front" aria-label="Frente do cartão">
                 <figure>
-                    <img width="45"
-                        src="../images/chip.png"
-                        alt="Chip do cartão">
-                    <img width="45"
-                        src="../images/bandeiras/mastercard.png"
-                        alt="bandeira do cartão">
+                    <img width="45" src="../images/chip.png" alt="Chip do cartão">
+                    <img width="45" src="../images/bandeiras/mastercard.png" alt="bandeira do cartão">
                 </figure>
                 <p id="numero">--</p>
                 <p id="validade">--</p>
@@ -87,25 +85,28 @@
                     <input type="text" id="input-nome" name="nome" maxlength="25" required>
 
                     <label for="numero">Número:</label>
-                    <input type="text"  id="input-numero" name="numero" inputmode="numeric"  required>
-    
-    
+                    <input type="text" id="input-numero" name="numero" inputmode="numeric" required>
+
+
                     <label for="input-validade">Validade:</label>
                     <input type="month" id="input-validade" name="validade" maxlength="5" required>
-    
+
                     <label for="input-cvv">CVV:</label>
-                    <input type="text" id="input-cvv" name="cvv" inputmode="numeric" pattern="[0-9]*" maxlength="3" required>
-    
+                    <input type="text" id="input-cvv" name="cvv" inputmode="numeric" pattern="[0-9]*" maxlength="3"
+                        required>
+
                     <label for="ainput-gencia">Agência:</label>
-                    <input type="text" id="input-agencia" name="agencia" inputmode="numeric" pattern="[0-9]*" maxlength="4"  required>
-    
+                    <input type="text" id="input-agencia" name="agencia" inputmode="numeric" pattern="[0-9]*"
+                        maxlength="4" required>
+
                     <label for="input-conta">Conta:</label>
-                    <input type="text" id="input-conta" name="conta" inputmode="numeric" pattern="[0-9]*" maxlength="8" required>
+                    <input type="text" id="input-conta" name="conta" inputmode="numeric" pattern="[0-9]*" maxlength="8"
+                        required>
                 </fieldset>
                 <button type="submit">Enviar</button>
             </form>
             <script>
-                document.querySelector("#formsCompra").addEventListener("submit",(e)=>{
+                document.querySelector("#formsCompra").addEventListener("submit", (e) => {
                     e.preventDefault()
                     alert("compra efetuada com sucesso")
                     localStorage.removeItem("carrinho");
@@ -115,7 +116,24 @@
         </section>
     </main>
     <footer>
-
+        <article>
+            <h3><strong>UrbanFlow – Arte que Corre nas Veias da Cidade</strong></h3>
+            <img src="../images/logoSimples.png" alt="Logo Simples" width="300px">
+        </article>
+        <address>
+            <h3>Contato</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li><i class="fas fa-map-marker-alt"></i> São Paulo – SP, Brasil</li>
+                <li><i class="fas fa-phone"></i> (11) 99999-9999</li>
+                <li><i class="fas fa-envelope"></i> contato@urbanflow.com.br</li>
+                <li><i class="fas fa-box"></i> Enviamos para todo o Brasil</li>
+                <li><i class="fas fa-clock"></i> Atendimento: Seg a Sex – 9h às 18h</li>
+            </ul>
+        </address>
+        <small>
+            <p>© 2025 UrbanFlow. Todos os direitos reservados.</p><br>
+            <p>Site criado por <a href="https://gabrielsantos15.github.io/Portfolio/">Gabriel dos Santos</a></p>
+        </small>
     </footer>
 </body>
 

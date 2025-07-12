@@ -36,6 +36,7 @@ header {
     color: #000000;
     padding: 20px 40px;
     background-color: #fff;
+    box-shadow: 0px 5px 20px 0px #00000021;
 
     position: sticky;
     top: 0;
@@ -133,19 +134,20 @@ header #buttonDarkMode {
 }
 
 h1 {
+    text-transform: capitalize;
     font-size: 5em;
 
-    margin: auto;
+    margin: 20px auto;
     width: fit-content;
 
-    padding: 0 1em;
     background-image: url(../images/traco.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
 h2:not(#logo) {
-    margin: auto;
+    text-transform: capitalize;
+    margin: 20px auto;
     width: fit-content;
     font-size: 3em;
 
@@ -160,6 +162,48 @@ section {
     padding: 1em;
 }
 
+footer{
+    display: grid;
+    grid-template-areas: 
+    "marca contato"
+    "direitos direitos";
+    gap: 1em;
+    flex-wrap: wrap;
+    background-color: #eee;
+    padding: 1em;
+    opacity: .7;
+    margin-top: 2em;
+}
+
+footer h3{
+    font-size: 1.5em;
+}
+footer article{
+    grid-area: marca;
+}
+footer article img{
+    width: min(300px,100%);
+}
+
+footer address{
+    grid-area: contato;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+footer address ul{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    text-align: right;
+    width: fit-content;
+}
+
+footer small{
+    grid-area: direitos;
+}
 
 /* ============================= INICIO ======================*/
 
