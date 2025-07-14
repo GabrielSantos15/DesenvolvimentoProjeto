@@ -1,6 +1,6 @@
 #cartao {
     padding: 0;
-    margin: auto;
+    margin: 1em auto;
     font-family: sans-serif;
     width: 400px;
     height: 250px;
@@ -104,6 +104,8 @@ form {
     padding: 1em;
     background-color: #fff;
     text-align: left;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #00000046;
 }
 
 form fieldset {
@@ -143,4 +145,38 @@ form #bandeirasForm input:checked+label {
 
 form #bandeirasForm img {
     width: 50px;
+}
+
+form input{
+    padding: 5px;
+    font-size: 1.2em;
+    outline: none;
+    margin-bottom: 0.5em;
+    border-radius: 5px;
+    border: 1px solid #ababab;
+}
+
+.botoesContainer{
+    display: flex;
+    flex-direction: row;
+    gap: .5em;
+}
+
+.botoesContainer input{
+    all: unset;
+    width: 100%;
+    margin: 1em 0;
+    padding: 0.5em;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    
+}
+
+form input[type="reset"]{
+    background-color: #aaaaaa;
+}
+form input[type="submit"]{
+    background-color: var(--corTema);
 }

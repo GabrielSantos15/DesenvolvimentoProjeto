@@ -43,6 +43,8 @@
     flex-wrap: nowrap;
     overflow-x: scroll;
     gap: 1em;
+
+    scroll-snap-type: x mandatory;
 }
 
 #produtosApresentacao article {
@@ -66,7 +68,9 @@
     background: var(--corTema);
     border-radius: 5px;
 }
-.cardApresentacao,.card{
+
+.cardApresentacao,
+.card {
     scroll-snap-align: start;
 }
 
@@ -79,7 +83,6 @@
     border-radius: 10px;
     color: #fff;
 }
-
 
 .cardApresentacao p {
     margin-bottom: 2em;

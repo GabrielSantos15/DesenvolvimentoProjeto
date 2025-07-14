@@ -103,7 +103,10 @@
                     <input type="text" id="input-conta" name="conta" inputmode="numeric" pattern="[0-9]*" maxlength="8"
                         required>
                 </fieldset>
-                <button type="submit">Enviar</button>
+                <fieldset class="botoesContainer">
+                    <input type="reset" value="Limpar"></input>
+                    <input type="submit" value="Finalizar Compra"></input>
+                </fieldset>
             </form>
             <script>
                 document.querySelector("#formsCompra").addEventListener("submit", (e) => {

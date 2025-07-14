@@ -93,6 +93,7 @@ header #buttonDarkMode {
     right: 0;
 
     width: 50vw;
+    height: calc(100dvh - 7dvh);
 
     background-color: var(--corCard);
     box-shadow: -11px 0px 20px 4px #00000036;
@@ -135,7 +136,7 @@ header #buttonDarkMode {
 
 h1 {
     text-transform: capitalize;
-    font-size: 5em;
+    font-size: 3em;
 
     margin: 20px auto;
     width: fit-content;
@@ -149,7 +150,7 @@ h2:not(#logo) {
     text-transform: capitalize;
     margin: 20px auto;
     width: fit-content;
-    font-size: 3em;
+    font-size: 2em;
 
     background-image: url(../images/traco.png);
     background-repeat: no-repeat;
@@ -162,11 +163,10 @@ section {
     padding: 1em;
 }
 
-footer{
-    display: grid;
-    grid-template-areas: 
-    "marca contato"
-    "direitos direitos";
+footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     gap: 1em;
     flex-wrap: wrap;
     background-color: #eee;
@@ -175,17 +175,19 @@ footer{
     margin-top: 2em;
 }
 
-footer h3{
+footer h3 {
     font-size: 1.5em;
 }
-footer article{
+
+footer article {
     grid-area: marca;
 }
-footer article img{
-    width: min(300px,100%);
+
+footer article img {
+    width: min(300px, 100%);
 }
 
-footer address{
+footer address {
     grid-area: contato;
     display: flex;
     flex-direction: column;
@@ -193,15 +195,15 @@ footer address{
     gap: 1em;
 }
 
-footer address ul{
+footer address ul {
     display: flex;
     flex-direction: column;
     gap: .5em;
-    text-align: right;
+    text-align: center;
     width: fit-content;
 }
 
-footer small{
+footer small {
     grid-area: direitos;
 }
 
@@ -219,5 +221,24 @@ footer small{
     .menu-icon,
     #menuMobile {
         display: none !important;
+    }
+
+    h1 {
+        font-size: 5em;
+    }
+
+    h2:not(#logo){
+        font-size: 3em;
+    }
+
+    footer {
+        display: grid;
+        grid-template-areas:
+            "marca contato"
+            "direitos direitos";
+    }
+
+    footer ul {
+        text-align: right;
     }
 }
