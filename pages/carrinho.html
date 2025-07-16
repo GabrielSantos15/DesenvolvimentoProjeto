@@ -11,6 +11,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/media.css">
+    <link rel="stylesheet" href="../styles/produtos.css">
     <link rel="stylesheet" href="../styles/carrinho.css">
 
     <script src="../data/produtos.js" defer></script>
@@ -44,14 +45,16 @@
         </ul>
     </nav>
     <main>
-        <section>
-            <h1>Carrinho</h1>
+        <h1>Carrinho</h1>
+        <section id="infosContainer">
+            <h3>Total: R$<output>20,00</output></h3>
+            <a href="compra.html">Finalizar Compra</a>
         </section>
-        <section id="carrinhoContainer">
+        <section class="produtosContainer" id="carrinhoContainer">
+            <img src="../images/logo.png" alt="Logo">
             <h3>Você não adicionou nada</h3><br>
-            <a href="produtos.html">Ver produtos</a>
         </section>
-        <a href="compra.html">Comprar</a>
+        <a href="produtos.html">Ver produtos</a>
     </main>
     <footer>
         <article>
