@@ -14,7 +14,7 @@ function inserirProdutos(container,lista) {
                 </figure>
                 <p>${e.texto}</p>
                 <button onclick="adicionarCarrinho(${i})">Adicionar</button>
-                <h4 class="preco">R$ ${e.valor}</h4>
+                <h4 class="preco">R$ ${e.valor.toFixed(2)}</h4>
             </article>
             `;
   });

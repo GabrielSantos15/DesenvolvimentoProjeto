@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/home.css">
     <link rel="stylesheet" href="styles/produtos.css">
+    <script src="data/produtos.js" defer></script>
     <script src="scripts/script.js" defer></script>
 </head>
 
@@ -126,5 +127,16 @@
         </small>
     </footer>
 </body>
-
+<script>
+    function adicionarCarrinho(i) {
+        try {
+            let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+            carrinho.push(produtosList[i]);
+            localStorage.setItem("carrinho", JSON.stringify(carrinho));
+            alert("Adicionado")
+        } catch {
+            alert("Parece que algo deu errado, tente novamente")
+        }
+    }
+</script>
 </html>

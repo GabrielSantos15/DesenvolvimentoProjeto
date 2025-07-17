@@ -184,7 +184,7 @@ footer article {
 }
 
 footer article img {
-    width: min(300px, 100%);
+    width: min(150px, 100%);
 }
 
 footer address {
@@ -227,7 +227,7 @@ footer small {
         font-size: 5em;
     }
 
-    h2:not(#logo){
+    h2:not(#logo) {
         font-size: 3em;
     }
 
@@ -236,6 +236,10 @@ footer small {
         grid-template-areas:
             "marca contato"
             "direitos direitos";
+    }
+
+    footer article img {
+        width: min(300px, 100%);
     }
 
     footer ul {
