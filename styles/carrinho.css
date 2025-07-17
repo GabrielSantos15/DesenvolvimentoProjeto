@@ -30,6 +30,10 @@
     filter: none;
 }
 
+.logoCard img{
+    max-width: 100%;
+}
+
 .logoCard a{
     color: #000;
     text-decoration: none;
