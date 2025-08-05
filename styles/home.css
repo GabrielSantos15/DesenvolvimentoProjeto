@@ -71,7 +71,7 @@
 
 .cardApresentacao,
 .card {
-    scroll-snap-align: start;
+    scroll-snap-align: center;
 }
 
 .cardApresentacao {
